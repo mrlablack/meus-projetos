@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornometro</title>
+
+</head>
+<style>
+    body{
+        justify-content: center;
+    }
+    .container{
+        text-align: center;
+        padding: 1px;
+        font-size: large;
+        
+    }
+    button:hover{
+        cursor: pointer;
+        color: rgba(10, 43, 133, 0.935);
+    }
+    button{
+        font-family:sans-serif;
+        width: 182px;
+        height: 77px;
+        font-size: 18px;
+        border-radius: 12px;
+
+    }
+    .parar{
+      
+        
+        background-color: brown;
+        
+        ;
+
+    }
+    .contar{
+          background-color: green
+    }
+</style>
+<body>
+<div class="container">
+   
+    <h1 > Cornométro</h1>
+    <h2 id="tempo">0</h2>
+   <button class="contar" onclick="ativarContagem()"> contar</button>
+  <button class="parar" onclick="pararContagem()"> Parar</button>
+
+
+</div>
+</body>
+<script src="index.js"></script>
+</html>

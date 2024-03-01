@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Restaurante</title>
+    <link rel="stylesheet" href="Estilo_Menu.css">
+    <script src="Script_Menu.js"></script>
+</head>
+<body>
+    <section class="menu">
+        <!-- title -->
+        <div class="title">
+          <h2> Nosso Menu</h2>
+          <div class="underline"></div>
+        </div>
+  
+        <!--  buttoes -->
+        <nav>
+          <ul>
+              <a class="link" href="Menu_Restaurante.html">  Todos</a>
+              <a class="link" href="pequeno_almoço.html"> Pequeno Almoço</a>
+              <a class="link" href="Almoco.html">  Almoço</a>
+              <a class="link" href="Bebidas.html">  Bebida</a>
+              <a class="link" href="Jantar.html">  Jantar</a>
+          </ul>
+         </nav>
+         <a href="#pedido" class=" lista_pedido"><button class=" pedidos" onclick="mostrarpedidos(`pedido`)">Ver lista de pedidos  </button></a>
+
+<div class="section-center">
+
+  <article class=" comidas">
+    <img src="imagens/Agua de Coco.jpg" class="photo" alt="" >
+    <div class="item-info">
+      <header>
+        <h4>Água de Côco</h4>
+        <h4 class="price">$8dbrs</h4>
+      </header>
+      <p class="item-text">
+        Mata sua sede com Agua de Cocô dos coqueiros das nossas praias.
+      </p>
+      <button class="botao" onclick="requisitarItens(`Agua de côco`,8)"> Requisitar</button>
+    </div>
+  </article>
+
+        
+  <article class="comidas">
+    <img src="imagens/conservar_el_vino_blanco.jpg" class="photo" alt="" >
+    <div class="item-info">
+      <header>
+        <h4>Vinho branco</h4>
+        <h4 class="price">$30 Dbs</h4>
+      </header>
+      <p class="item-text">
+      <p>Vinhos tranquilos de coloração amarela em variados tons, em alguns casos quase incolor.
+     Ideais para serem consumidos a temperaturas próximas a 10º C e acompanham bem comidas leves. </p>
+      </p>
+      <button class ="botao" onclick="requisitarItens(`cerveja`,30)"  > Requisitar</button>
+    </div>
+  </article>
+
+
+
+  <article class="comidas">
+    <img src="imagens/wine-2408620_1280-1024x682.jpg" class="photo" alt="" >
+    <div class="item-info">
+      <header>
+        <h4>Vinho tinto</h4>
+        <h4 class="price">$78 Dbs</h4>
+      </header>
+      <p class="item-text">
+      <p>Um vinho límpido, de cor vermelho profundo, com aromas de frutos pretos, amora, ameixa e cereja, com notas licoradas. É intenso, volumoso e estruturado, com final vinoso e persistente.</p>
+      </p>
+      <button class ="botao" onclick="requisitarItens(`cerveja`,30)"  > Requisitar</button>
+    </div>
+  </article>
+
+       <article class="comidas">
+            <img src="imagens/cerveja.jfif" class="photo" alt="" >
+            <div class="item-info">
+              <header>
+                <h4>Cerveja Rosema</h4>
+                <h4 class="price">$30 Dbs</h4>
+              </header>
+              <p class="item-text">
+              <p> Bebida nacional  produzidas na região industrial do pais,uma  das mais consumida no pais, </p>
+              </p>
+              <button class ="botao" onclick="requisitarItens(`cerveja`,30)"  > Requisitar</button>
+            </div>
+          </article>
+
+          
+          <article class="comidas">
+            <img src="imagens/palm-wine (1).jpg" class="photo" alt="" >
+            <div class="item-info">
+              <header>
+                <h4>Vinho da palma</h4>
+                <h4 class="price">$20 Dbs</h4>
+              </header>
+              <p class="item-text">
+              <p> Bebida nacional,É um vinho  feito da seiva das palmeiras, que é recolhido por meio de canas e deixado a fermentar. </p>
+              </p>
+              <button class ="botao" onclick="requisitarItens(`cerveja`,30)"  > Requisitar</button>
+            </div>
+          </article>
+    
+</div>
+<div id="pedido"  >
+  <h2 class=" title">Seu Pedidos</h2> 
+  <ul id="lista"  class="comidas" > 
+  </ul>
+<p id="total" >Total: 0,00 dbrs  </p>
+    </section>
+    
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoa</title>
+    <style>
+        body{
+            background-color: aqua;
+            font-size: 20pt;
+            text-align: center;
+        }h1{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem vindo/a nossa  Home Page</h1>
+    <Script>
+       
+       var nome= window.prompt("Qual é o seu nome")
+       var ano= Number(window.prompt("Nasceste em que ano"))
+       var aux = 2023
+       idade = aux - ano
+      document.writeln("Olá " + nome + ", como pode ver essa é uma página que está em criação e por essa razão a mesma se encontra um pouco vazia.<br>")
+      document.writeln("Com os dados  que inseriste podemos inferir que você possui " + idade + " anos de idade, " + "o seu nome possui " + nome.length + " letras<br>")
+       
+      if(idade>25 && idade<60){
+        document.write("De acordo com os nossos dados você se encontra na classe dos adultos.")
+      }else if(idade>60){
+        document.write("De acordo com os nossos dados você se encontra na classe dos idosos.")
+      }else if(idade>=12 && idade<=25){
+        document.write("De acordo com os nossos dados você se encontra na classe dos adoloscentes.")
+      }else if(idade>=3 && idade <12){
+        document.write("De acordo com os nossos dados você se encontra na classe das crianças.")
+      }else if(idade<=2){
+        document.write("De acordo com os nossos dados você ainda é um bêbê.")
+      }
+
+    </Script>
+</body>
+</html>

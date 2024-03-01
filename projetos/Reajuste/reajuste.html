@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(63, 59, 59);
+
+    }
+    h1{
+        font-size: large;
+        margin-top: 4rem;
+        color: white;
+        font-size: 20px;
+        
+    }
+    #contener{
+        text-align: center;
+        margin-top: 11rem;
+        width: 500px;
+        border: 1px solid darkcyan;
+        height: 480px;
+       margin-left: 35%;
+       background: url(bg.jpg);
+       background-size: cover;
+       border-radius: 30px;
+    } 
+    #sal ,#per{
+        width: 300px;
+        height: 25px;
+        font-size: 18px;
+       padding-left: 1rem;
+        border-radius: 70px;
+ 
+    }
+
+    #btn{
+        margin-top: 1rem;
+        height: 28px;
+        border-radius: 10px;
+        font-size: 18px;
+        transition: 1s;
+       
+    
+
+    }
+    #btn:hover{
+        transition: 1s;
+        background-color: darkcyan;
+        color: white;
+    }
+    #res{
+        margin-top: 2rem;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+       
+    }
+
+    p{
+        color: aquamarine;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .pa{
+        color: white;
+    }
+
+</style>
+<body>
+    <div id="contener" >
+   
+    <h1> Reajuste  Salarial</h1>
+ <p>Digite seu salario </p><input type="text" name="" id="sal"> <br> <br> <p class="pa"> Percentagem </p> <input type="text" name="" id="per"><br> <br>
+  <input type="button" value="verificar" onclick="calcular()" id="btn">
+<div id="res"> </div>
+
+     
+</div>
+</body>
+<script>
+    function calcular(){
+        var sala=document.querySelector("#sal")
+        var per=document.querySelector("#per")
+        var resl=document.querySelector("#res")
+        var sal=Number(sala.value)
+        var perc=Number(per.value)
+        var Precentagem= perc/100
+        var resulatado=sal*Precentagem+sal
+       if(sal== "" || perc==""  ){
+      alert("[Erro] Não pode deixar campo vazio!")
+      
+       }
+       else if(sal<0 || perc<0){
+        alert("[Erro] Não existe valores monétario negativo!")
+       }
+
+       else{
+        resl.innerHTML="O seu saldo atual é de " + resulatado + " Dobras"
+        
+       }
+
+sala.value=``
+sala.focus()
+per.value=``
+per.focus()
+
+        
+    }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+     
+</script>
+</html>

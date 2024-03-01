@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Eventos Dom</title>
+</head>
+
+
+<style>
+
+
+#res{
+    width: 400px;
+    height: 400px;
+    margin-left: 35%;
+    margin-top: 10rem;
+   color: white;
+   font-weight: bold;
+   font-size: 19px;
+}
+
+</style>
+
+
+
+<body>
+
+
+
+    <div id="res" onclick="clicar()" onmouseenter="entra()" onmouseout="sair()">
+                Eventos DOM
+    </div>
+
+
+
+
+
+
+
+
+    
+</body>
+
+<script>
+
+
+function clicar() {
+
+    var res= window.document.querySelector("#res")
+    res.innerHTML = "Clicaste"
+   res.style.background = "red"
+}
+
+function entra() {
+
+var res= window.document.querySelector("#res")
+res.innerHTML = "Entraste"
+res.style.background = "green"
+}
+
+function sair() {
+
+var res= window.document.querySelector("#res")
+res.innerHTML = "Saiste"
+res.style.background = "blue"
+}
+
+
+
+
+
+
+
+
+
+</script>
+</html>

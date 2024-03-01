@@ -1,0 +1,95 @@
+*{
+    margin :0;
+    padding: 0;
+}
+
+
+
+#fundo{
+    background-image: linear-gradient(45deg,rgb(88, 21, 21),rgba(225, 175, 35, 0.659));
+    height: 100vh;
+    color: #f2dddd;
+    
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+#calculadora{
+    position: absolute;
+    background-color:rgba(76, 37, 37, 0.918);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 15px;
+
+}
+
+div#Display{
+   /* transform: translate(250%,500%); */
+background-color: black;
+color: white;
+text-align: right;
+width: 230px;
+    height:70px ;
+    word-break: break-all;
+    word-wrap: break-word;
+    -webkit-text-stroke-width: 10%;
+}
+
+div#Keys{
+    /* transform: translate(250%,127%); */
+background-color: rgb(0, 60, 255);
+width:300px;
+    height:400px ;
+    
+}
+
+.botao{
+    width: 120px; /* largura*/
+    height: 80px;/* altura*/
+    font-size: 25px;
+    margin: 0px;
+    cursor: pointer;
+    background-color: rgb(31,31,31);
+    
+    color: #fff
+
+}
+.botao:hover{  /* aqui e quand cursor passar pra mudar de cor*/
+    background-color: rgb(49, 29, 29);
+    
+}
+
+#Display{
+    width: 480px;
+    background-color: #171616;
+    height: 170px;
+    margin: 7%;
+    font-size: 30px;  /* tamanho da fonte */
+    color: rgb(196, 222, 170);
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    justify-content: center
+;position: relative;
+right: 20px;
+
+
+}
+.botao_igual{
+    width: 120px; /* largura*/
+    height: 240px;/* altura*/
+    font-size: 25px;
+    margin: 0px;
+    cursor: pointer;
+    background-color: rgb(31,31,31);
+    color: #fff
+}
+.botao_igual:hover{
+    background-color: rgb(49, 29, 29);
+}
+.table{
+    width: 300px;
+}

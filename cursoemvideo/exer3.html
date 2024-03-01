@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Registor de velocidade</h1>
+  Velocidade <input type="number" name=" velocidade " id="velo"> 
+  <input type="button" value="Verificar" onclick="verificar()">
+  <div id="res"></div>
+</body>
+<script>
+function verificar(){
+    var tex=document.querySelector(`input#velo`)
+    var res =document.querySelector(`div#res`)
+    var velo=Number(tex.value)
+    if(velo>40){
+        res.innerHTML="voce ultrapassou a volocidade impossta pela lei"
+    }
+    else if(velo>37&&velo<=40){
+        res.innerHTML="voce esta chegando a limite da velocidade"
+
+    }
+    else{
+        res.innerHTML="Voce esta numa velocidade moderada "
+
+    }}
+
+</script>
+</html>

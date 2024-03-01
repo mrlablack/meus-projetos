@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu REstaurante</title>
+    <link rel="stylesheet" href="Estilo_Menu.css">
+    <script src="Script_Menu.js"></script>
+</head>
+<body>
+    <section class="menu">
+        <!-- title -->
+        <div class="title">
+          <h2> Nosso Menu</h2>
+          <div class="underline"></div>
+        </div>
+  
+        <!--  buttoes -->
+        <nav>
+          <ul>
+              <a class="link" href="Menu_Restaurante.html">  Todos</a>
+              <a class="link" href="pequeno_almoço.html"> Pequeno Almoço</a>
+              <a class="link" href="Almoco.html">  Almoço</a>
+              <a class="link" href="Bebidas.html">  Bebida</a>
+              <a class="link" href="Jantar.html">  Jantar</a>
+          </ul>
+         </nav>
+         <a href="#pedido" class=" lista_pedido"><button class=" pedidos" onclick="mostrarpedidos(`pedido`)">Ver lista de pedidos  </button></a>
+
+<div class="section-center">
+
+  <article class=" comidas">
+    <img src="imagens/Safu.jpg" class="photo" alt="" >
+    <div class="item-info">
+      <header>
+        <h4>Safu cuzido acompanhado de omelete</h4>
+        <h4 class="price">$30dbrs</h4>
+      </header>
+      <p class="item-text">
+       Sobremesa rapida com ingredientes certos para alergar o seu dia com omelete e safú .
+      <button class="botao" onclick="requisitarItens(`Safu cuzido`,30)"> Requisitar</button>
+    </div>
+  </article>
+
+      
+      <article class=" comidas">
+        <img src="imagens/Frutas.jpg" class="photo" alt="" >
+        <div class="item-info">
+          <header>
+            <h4>Frutas fatiadas</h4>
+            <h4 class="price">$48 dbrs</h4>
+          </header>
+          <p class="item-text">
+            Aproveita as mais variadas frutas com sabores variado para uma sobremesa fantastica.
+          </p>
+          <button class="botao" onclick="requisitarItens(`Frutas fatiadas`,48)"> Requisitar</button>
+        </div>
+      </article>
+      
+      <article class=" comidas">
+        <img src="imagens/Ovo.jpeg" class="photo" alt="" >
+        <div class="item-info">
+          <header>
+            <h4>OVo estrelado acompanhado de pão intregal</h4>
+            <h4 class="price">$120 dbrs</h4>
+          </header>
+          <p class="item-text">
+            Para um pequeno Almoço de exelencia desfrute de um ovo estrelado acompanhado com pão intregal. 
+          </p>
+          <button class="botao" onclick="requisitarItens(`Ovo estrelado`,120)"> Requisitar</button>
+        </div>
+      </article>
+            
+
+      <article class=" comidas">
+        <img src="imagens/Hamburguer.jpeg" class="photo" alt="" >
+        <div class="item-info">
+          <header>
+            <h4>Hamburger com batata frita</h4>
+            <h4 class="price">$190 dbrs</h4>
+          </header>
+          <p class="item-text">
+            Hamburger com batata frita  cumida rapida ,saborosa, bom para os apresados.
+          </p>
+          <button class="botao"onclick="requisitarItens(`Humburger `,190)"> Requisitar</button>
+        </div>
+      </article>
+
+      <article class=" comidas">
+        <img src="imagens/Frutas e bolo de banana.jpg" class="photo" alt="" >
+        <div class="item-info">
+          <header>
+            <h4>Bolo de banana e frutas  Saudaveis</h4>
+            <h4 class="price">$80 dbrs</h4>
+          </header>
+          <p class="item-text">
+            Saborosa sobremesa ,um bolo delicioso acomoanhado  frutas com sabores variado da nossa terra
+          </p>
+          <button class="botao"onclick="requisitarItens(`Bolo de banana`,80)"> Requisitar</button>
+        </div>
+      </article>
+
+      <article class="comidas">
+        <img src="imagens/Izaq.jpg" class="photo" alt="" >
+        <div class="item-info">
+          <header>
+            <h4>Izaquente de Açucar</h4>
+            <h4 class="price">$30 Dbs</h4>
+          </header>
+          <p class="item-text">
+          <p> Prato tipico santomense ,apetitoso rapido de si fazer e muito consumido  </p>
+          </p>
+          <button class ="botao" onclick="requisitarItens(`cerveja`,30)"  > Requisitar</button>
+        </div>
+      </article>
+
+    </div>
+    
+    <div id="pedido"  >
+      <h2 class=" title">Seu Pedidos</h2> 
+      <ul id="lista"  class="comidas" > 
+      </ul>
+  <p id="total" >Total: 0,00 dbrs  </p>
+    </section>
+    
+  
+</body>
+</html>

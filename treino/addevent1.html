@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+       .res{
+            border: 5px solid #FFAB33;
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+            font-size: 30px;
+            cursor: pointer;
+            margin: auto;
+            background: #FF5733;
+          }
+    </Style>
+</head>
+<body>
+    <h1  class="titulo"> titullo </h1>
+    <div class="res"> Click Aqui </div>
+    
+</body>
+<Script>
+const h1=document.querySelector(`h1`)
+    const ele=document.querySelector(`.res`)
+   ele.addEventListener(`click`,()=>{
+   let hora=new Date()
+    h1.textContent= "Sao " + hora.getHours() + ":"
+    + hora.getMinutes()+ ""+ ":"+hora.getSeconds()+ "Secundos"
+   })
+ 
+
+/*function msg(){
+    window.alert(``)
+
+
+/*function msg(){
+    const p=document.querySelector("p")
+   p.innerHTML="titulo2"
+   p.style.backgroundColor=`blue`
+   p.style.textAlign="center" */
+
+
+   
+
+   
+
+
+
+
+
+</Script>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU Restaurante</title>
+    <link rel="stylesheet" href="Estilo_Menu.css">
+    <script src="Script_Menu.js"></script>
+</head>
+<body>
+    <section class="menu">
+        <!-- title -->
+        <div class="title">
+          <h2> Nosso Menu</h2>
+          <div class="underline"></div>
+        </div>
+  
+        <!--  buttoes -->
+        <nav>
+          <ul>
+              <a class="link" href="Menu_Restaurante.html">  Todos</a>
+              <a class="link" href="pequeno_almoço.html"> Pequeno Almoço</a>
+              <a class="link" href="Almoco.html">  Almoço</a>
+              <a class="link" href="Bebidas.html">  Bebida</a>
+              <a class="link" href="Jantar.html">  Jantar</a>
+          </ul>
+         </nav>
+         <a href="#pedido" class=" lista_pedido"><button class=" pedidos" onclick="mostrarpedidos(`pedido`)">Ver lista de pedidos  </button></a>
+
+<div class="section-center">
+
+  <article class=" comidas">
+    <img src="imagens/Catxupa.jpg" class="photo" alt="" >
+    <div class="item-info">
+      <header>
+        <h4>Catxupa</h4>
+        <h4 class="price">$100 dbrs</h4>
+      </header>
+      <p class="item-text">
+        Saborosa  Catxupa de peixes com gão milho , feijão  e outros  tempero da terra.</p>
+      <button class="botao" onclick="requisitarItens(`Catxupa`,100)"> Requisitar</button>
+    </div>
+  </article>
+
+
+      <article class=" comidas">
+        <img src="imagens/aroz doce.jpg" class="photo" alt="" >
+        <div class="item-info">
+          <header>
+            <h4>Arroz  doce com milho</h4>
+            <h4 class="price">$180 dbrs</h4>
+          </header>
+          <p class="item-text">
+           Um delicioso prato feito com arroz e milho de dar água na boca. 
+          </p>
+          <button class="botao"onclick="requisitarItens(`Arroz doce `,180)"> Requisitar</button>
+        </div>
+      </article>
+
+       
+      <article class="comidas">
+        <img src="imagens/Quizaca.jpg" class="photo" >
+        <div class="item-info">
+          <header>
+            <h4>Quizacá</h4>
+            <h4 class="price">$20 Dbrs</h4>
+          </header>
+          <p class="item-text">
+          O peixe é cozido em um molho saboroso com tomate, cebola, alho, pimentão e especiarias. 
+            É servido com arroz branco e acompanhado de legumes cozidos.
+          </p>
+          <button class="botao" onclick="requisitarItens(`Quizacá `,20)"> Requisitar</button>
+        </div>
+      </article>
+        
+      <article class="comidas">
+        <img src="imagens/calulu10.jpg" class="photo" alt="" >
+        <div class="item-info">
+          <header>
+            <h4> Calulu</h4>
+            <h4 class="price">$40 Dbs</h4>
+          </header>
+          <p class="item-text">
+          <p> Um prato tradicional de são tomé que consiste em frango cozido com uma mistura de folhas ,que depois de preparado dão um sabor unico </p>
+          </p>
+          <button class ="botao" onclick="requisitarItens(`calulu`,40)"  > Requisitar</button>
+        </div>
+      </article>
+
+      
+        </div>
+        <div id="pedido"  >
+          <h2 class=" title">Seu Pedidos</h2> 
+          <ul id="lista"  class="comidas" > 
+          </ul>
+      <p id="total" >Total: 0,00 dbrs  </p>      
+    </section>
+    
+   
+</body>
+</html>

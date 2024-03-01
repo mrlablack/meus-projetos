@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<Style>
+body{
+    background-color: rgb(70, 142, 236);
+    font: normal 15pt arial;
+}
+header{
+    color: white;
+    text-align: center;
+}
+section{
+    background: white;
+    border-radius: 10px;
+    width:508px ;
+    margin: auto;
+    box-shadow: 3px 3px 18px rgb( 0,0,0,00.363);
+    padding: 9px;
+}
+footer{
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
+select{
+    width: 120px;
+}
+</Style>
+<body>
+ <header>
+     <h1> Analisador de Numero</h1> 
+</header> 
+
+ <section>
+     <div>
+Numero (entre 1 e 100): <input type="number" name="" id="texn">
+<input type="button" value="Adicionar" onclick="adicionar()"> <br>
+<select name="" id="lista" size="10"></select><br>
+<input type="button" value="Finalizar" onclick="finalizar()">
+  </div>
+
+ <div id="res">
+
+    </div>
+ </section>
+
+<footer>
+        <p>&copy;Lablack </p>
+
+</footer>
+</body>
+</html>

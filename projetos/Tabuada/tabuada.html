@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<style>
+    body{
+      
+      text-align: center;
+      background-color: rgb(28, 186, 243);
+      color: white;
+      font-size: 30px;
+    }
+    .contener{
+      width: 440px;
+      text-align: center;
+      height: 300px;
+       margin-left: 620px;
+      border: 4px solid darkcyan;
+      border-radius: 8px;
+      color: black;
+      background-color: floralwhite;
+      padding:3px;
+      padding-top: 1rem;
+    }
+    h1{
+    
+        margin-top:100px ;
+        color: hwb(0 96% 0%);
+        font-size: 28px;
+        text-align: center;
+    }
+   #tabu{
+    width: 120px;
+        height: 20px;
+        font-size: 18px;
+       padding-left: 1rem;
+        border-radius: 30px;
+   }
+    #btn{
+      margin-top: 1rem;
+        height: 28px;
+        border-radius: 10px;
+        font-size: 18px;
+        transition: 1s;
+    }
+    #res{
+      width: 220px;
+      margin-top: 0.5rem;
+      font-size: 17px;
+      padding-left: 1rem;
+    }
+    #btn:hover{
+        transition: 1s;
+        background-color: darkcyan;
+        color: white;}
+
+</style>
+
+<body> 
+   <h1>Tabuada</h1>
+  <div class="contener">
+  
+  Número: <input type="number" name="" id="tabu">
+    <input type="button" value="Gerir Tabuada" onclick="calcular()" id="btn">
+
+
+<div>
+  <select name="" id="res"  size="11" > <option value=""> Digite um numero acima</option></select>
+</div>
+
+
+</div>
+
+</select >
+<footer>
+  <p>&copy;Lablack </p>
+</footer>
+</body>
+
+<Script>
+function calcular(){
+    
+    num = document.querySelector("#tabu")
+    res=document.querySelector("#res")
+    var resultado
+    numb=Number(num.value)
+  if(num.value.length==0){
+    alert("insira qualquer numero")
+  }
+  else {
+    res.innerHTML=``
+    for( i=0;i<11;i++){
+       let iten =document.createElement(`option`)
+       iten.text= `${numb} x ${i}= ${numb*i}`
+       res.appendChild(iten)
+
+       
+      
+    }
+
+  }
+num.value=``
+num.focus()
+  
+    
+   
+}
+
+
+</Script>
+</html>

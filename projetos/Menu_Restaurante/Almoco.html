@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Restaurante</title>
+    <link rel="stylesheet" href="Estilo_Menu.css">
+    <script src="Script_Menu.js"></script>
+</head>
+<body>
+    <section class="menu">
+        <!-- title -->
+        <div class="title">
+          <h2> Nosso Menu</h2>
+          <div class="underline"></div>
+        </div>
+  
+        <!--  buttoes -->
+        <nav>
+          <ul>
+              <a class="link"href="Menu_Restaurante.html">  Todos</a>
+              <a class="link"href="pequeno_almoço.html"> Pequeno Almoço</a>
+              <a class="link"href="Almoco.html">  Almoço</a>
+              <a class="link"href="Bebidas.html">  Bebida</a>
+              <a class="link"href="Jantar.html">  Jantar</a>
+          </ul>
+         </nav>
+         <a href="#pedido" class=" lista_pedido"><button class=" pedidos" onclick="mostrarpedidos(`pedido`)">Ver lista de pedidos  </button></a>        
+  
+
+<div class="section-center">
+
+
+    <div class="section-center">
+        <article class="comidas">
+          <img src="imagens/molho_de_folha_fruta.jpg" class="photo" alt="" >
+          <div class="item-info">
+            <header>
+              <h4> Molho de folha com fruta</h4>
+              <h4 class="price">$150 Dbs</h4>
+            </header>
+            <p class="item-text">
+            <p> 
+              Um prato típico , o molho de folha com fruta e ensopado feito com folhas verdes ou 
+              outras verduras locais, cozidas em um molho de tomate e temperos. 
+            </p>
+            <button class ="botao" onclick="requisitarItens(`Molho de folha`,150)" id="molho" > Requisitar</button>
+          </div>
+        </article>
+        
+
+        <article class=" comidas">
+          <img src="imagens/Catxupa.jpg" class="photo" alt="" >
+          <div class="item-info">
+            <header>
+              <h4>Catxupa</h4>
+              <h4 class="price">$100 dbrs</h4>
+            </header>
+            <p class="item-text">
+              Um cozido feito com milho, feijão, carne (como carne de porco, frango ou linguiça), vegetais e temperos. 
+            <button class="botao" onclick="requisitarItens(`Catxupa`,100)"> Requisitar</button>
+          </div>
+        </article>
+
+      <article class=" comidas">
+        <img src="imagens/Fruta com peixe.jpg" class="photo" alt="" >
+        <div class="item-info">
+          <header>
+            <h4>Fruta com Peixe</h4>
+            <h4 class="price">$122 dbrs</h4>
+          </header>
+          <p class="item-text">
+           Prato tradicional  feito com fruta pão com voador grelhado com olio da palma.
+          </p>
+          <button class="botao" onclick="requisitarItens(`Fruta com peixe`,122)"> Requisitar</button>
+        </div>
+      </article>
+       
+      <article class=" comidas">
+        <img src="imagens/santolas.jpg" class="photo" alt="" >
+        <div class="item-info">
+          <header>
+            <h4>Carangueijo Santola</h4>
+            <h4 class="price">$9 dbrs</h4>
+          </header>
+          <p class="item-text">
+             O caranguejo é preparado cozido e servido com um molho aromático,
+             muitas vezes feito com azeite de dendê, tomate, cebola, alho e temperos. 
+          </p>
+          <button  class ="botao" onclick="requisitarItens(`carangueijo `,9)" id="molho"> Requisitar</button>
+        </div>
+      </article>
+
+
+ <div id="pedido"  >
+        <h2 class=" title">Seu Pedidos</h2> 
+       <ul id="lista"  class="comidas" > 
+      </ul>
+   <p id="total" >Total: 0,00 dbrs  </p>  
+
+    </section>
+    
+  
+</body>
+</html>

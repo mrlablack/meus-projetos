@@ -1,0 +1,384 @@
+<!-- HTML -->
+<section id="menu">
+    <h2>Menu do Restaurante</h2>
+    <div class="column-3 columns">
+      <div class="menu-item">
+        <img src="salada.jpg" alt="Salada">
+        <h3>Salada</h3>
+        <p>R$ 15,00</p>
+        <button id="salada">Adicionar</button>
+      </div>
+      <div class="menu-item">
+        <img src="steak.jpg" alt="Steak">
+        <h3>Steak</h3>
+        <p>R$ 17,00</p>
+        <button id="steak">Adicionar</button>
+      </div>
+      <div class="menu-item">
+        <img src="sorvete.jpg" alt="Sorvete">
+        <h3>Sorvete</h3>
+        <p>R$ 4,00</p>
+        <button id="sorvete">Adicionar</button>
+      </div>
+    </div>
+    <div id="pedido">
+      <h2>Seu Pedido</h2>
+      <ul id="lista"></ul>
+      <p id="total">Total: R$ 0,00</p>
+    </div>
+  </section>
+  
+  <!-- CSS -->
+  <style>
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #menu {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  #menu h2 {
+    text-align: center;
+  }
+  
+  .column-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .columns {
+    margin-top: 40px;
+  }
+  
+  .menu-item {
+    border: 1px solid #ccc;
+  }
+  
+  .menu-item img {
+    width: 100%;
+  }
+  
+  .menu-item h3,
+  .menu-item p {
+    text-align: center;
+  }
+  
+  .menu-item button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+  
+  #pedido {
+    margin-top: 40px;
+  }
+  
+  #pedido ul {
+    list-style: none;
+  }
+  
+  #pedido li {
+    margin-bottom: 10px;
+  }
+</style>
+  
+  <!-- JavaScript -->
+  <Script> 
+  // Criando uma variável para armazenar o pedido do cliente
+  var pedido = [];
+  
+  // Criando uma função para adicionar um item ao pedido
+  function adicionarItem(nome, preco) {
+    pedido.push({nome: nome, preco: preco});
+    alert("Você adicionou " + nome + " por R$" + preco + " ao seu pedido.");
+  }
+  
+  // Criando uma função para mostrar o pedido e o total
+  function mostrarPedido() {
+    var lista = document.getElementById("lista");
+    var total = document.getElementById("total");
+    
+    // Limpando a lista anterior
+    lista.innerHTML = "";
+    
+    // Calculando o total do pedido
+    var soma = 0;
+    
+    // Criando os elementos li para cada item do pedido
+    for (var i = 0; i < pedido.length; i++) {
+      var li = document.createElement("li");
+      li.textContent = pedido[i].nome + " - R$" + pedido[i].preco;
+      lista.appendChild(li);
+      soma += pedido[i].preco;
+      
+      // Adicionando um botão de remover para cada item
+      var botao = document.createElement("button");
+      botao.textContent = "Remover";
+      lista.appendChild(botao)
+      
+      // Adicionando um evento de clique ao botão de remover
+      botao.addEventListener("click", function() {
+        
+        // Removendo o item do pedido
+        var index = pedido.indexOf(pedido[i]);
+        pedido.splice(index,1);
+        
+        // Atualizando a lista e o total
+        mostrarPedido();
+        
+      });
+      
+
+    
+    }
+    
+    // Atualizando o total
+    total.textContent = "Total: R$" + soma;
+  }
+  
+  // Selecionando os botões do HTML pelo id
+  var botaoSalada = document.getElementById("salada");
+  var botaoSteak = document.getElementById("steak");
+  var botaoSorvete = document.getElementById("sorvete");
+  
+  // Adicionando eventos de clique aos botões para chamar as funções
+  botaoSalada.addEventListener("click", function() {
+    adicionarItem("Salada", 15);
+    mostrarPedido();
+  });
+  
+  botaoSteak.addEventListener("click", function() {
+    adicionarItem("Steak", 17);
+    mostrarPedido();
+  });
+  
+  botaoSorvete.addEventListener("click", function() {
+    adicionarItem("Sorvete", 4);
+    mostrarPedido();
+  });
+</Script>
+
+<script>
+
+
+<!-- JavaScript -->
+// Criando uma variável para armazenar o pedido do cliente
+var pedido = [];
+
+// Criando uma função para adicionar um item ao pedido
+function adicionarItem(nome, preco) {
+  pedido.push({nome: nome, preco: preco});
+  alert("Você adicionou " + nome + " por R$" + preco + " ao seu pedido.");
+}
+
+// Criando uma função para mostrar o pedido e o total
+function mostrarPedido() {
+  var lista = document.getElementById("lista");
+  var total = document.getElementById("total");
+  
+  // Limpando a lista anterior
+  lista.innerHTML = "";
+  
+  // Calculando o total do pedido
+  var soma = 0;
+  
+  // Criando os elementos li para cada item do pedido
+  for (var i = 0; i < pedido.length; i++) {
+    var li = document.createElement("li");
+    li.textContent = pedido[i].nome + " - R$" + pedido[i].preco;
+    lista.appendChild(li);
+    soma += pedido[i].preco;
+    
+    // Adicionando um botão de remover para cada item
+    var botao = document.createElement("button");
+    botao.textContent = "Remover";
+    
+    // Adicionando um evento de clique ao botão de remover
+    botao.addEventListener("click", function() {
+      
+      // Removendo o item do pedido
+      var index = pedido.indexOf(pedido[i]);
+      pedido.splice(index,1);
+      
+      // Atualizando a lista e o total
+      mostrarPedido();
+      
+    });
+    
+    // Adicionando o botão ao li
+    li.appendChild(botao);
+  }
+  </script>
+    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+   
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  }
+  
+  // Atualizando o total
+  total.textContent = "Total: R$" + soma;
+}
+
+// Selecionando os botões do HTML pelo id
+var botaoSalada = document.getElementById("salada");
+var botaoSteak = document.getElementById("steak");
+var botaoSorvete = document.getElementById("sorvete");
+
+// Adicionando eventos de clique aos botões para chamar as funções
+botaoSalada.addEventListener("click", function() {
+  adicionarItem("Salada", 15);
+  mostrarPedido();
+});
+
+botaoSteak.addEventListener("click", function() {
+  adicionarItem("Steak", 17);
+  mostrarPedido();
+});
+
+botaoSorvete.addEventListener("click", function() {
+  adicionarItem("Sorvete", 4);
+  mostrarPedido();
+});
+  

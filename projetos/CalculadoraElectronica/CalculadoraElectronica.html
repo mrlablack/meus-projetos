@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+<body>
+
+    <div id="fundo">
+        <div id="calculadora"> 
+        <h1> Calculadora </h1>
+        <p id="Display"> </p>
+            <h1></h1>
+
+            <table  class=" table"border ="1">
+                <tr>
+                        <td><button class="botao" onclick="escreverSimbolo('+')"  >+</button></td>
+                        <td><button class="botao" onclick="escreverSimbolo('-')"  >-</button></td>
+                        <td><button class="botao" onclick="escreverSimbolo('/')"  >÷</button></td>
+                        <td><button class="botao" onclick="escreverSimbolo('*')"  >×</button></td>
+                </tr>
+                 <tr>
+                        <td><button class="botao" onclick="escrever('7')"  >7</button></td>
+                        <td><button class="botao" onclick="escrever('8')"  >8</button></td>
+                        <td><button class="botao" onclick="escrever('9')"  >9</button></td>
+                        <td><button class="botao" onclick="apagar()"> C </button></td>
+                      
+                </tr>
+                <tr>
+                        <td><button class="botao" onclick="escrever('4')"  >4</button></td>
+                        <td><button class="botao" onclick="escrever('5')"  >5</button></td>
+                        <td><button class="botao" onclick="escrever('6')"  >6</button></td>
+                        <td rowspan="3"><button class="botao_igual" onclick="calcular()">=</button></td>
+                        </tr>
+                        
+                <tr>
+                        <td><button class="botao" onclick="escrever('1')"  >1</button></td>
+                        <td><button class="botao" onclick="escrever('2')"  >2</button></td>
+                        <td><button class="botao" onclick="escrever('3')"  >3</button></td>
+                </tr>
+                <tr>     
+                        <td><button class="botao" onclick="escrever('0')"  >0</button></td>
+                        <td><button class="botao" onclick="escreverSimbolo('.')">.</button></td>
+                        <td><button class="botao" onclick="limpar()"  >AC</button></td>
+                        </tr>
+            </table>
+            <p> <strong>@L2_Informatica </strong> </p>
+           </div>
+        </div>
+        <script>
+        </script>
+    <script src="Script.js"></script>
+</body>
+</html>
